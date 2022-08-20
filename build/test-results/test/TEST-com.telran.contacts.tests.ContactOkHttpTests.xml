@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.telran.contacts.tests.ContactOkHttpTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-19T18:28:20" hostname="LAPTOP-ES9UA65O" time="1.031">
+  <properties/>
+  <testcase name="RegistrationOkHttpNegativeTestWithInvalidEmail" classname="com.telran.contacts.tests.ContactOkHttpTests" time="1.031"/>
+  <system-out><![CDATA[400
+Wrong email format! Example: name@mail.com
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
