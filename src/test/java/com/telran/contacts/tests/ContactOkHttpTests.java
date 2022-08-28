@@ -5,6 +5,7 @@ import com.telran.contacts.dto.AuthRequestDto;
 import com.telran.contacts.dto.ErrorDto;
 import com.telran.contacts.dto.LoginRegResponseDto;
 import okhttp3.*;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -33,10 +34,14 @@ public static final MediaType JSON = MediaType.get("application/json; charset=ut
 
     Response response = client.newCall(request).execute();
 
+
     String responseJson = response.body().string();
     ErrorDto errorDto = gson.fromJson(responseJson,ErrorDto.class);
     System.out.println(errorDto.getCode());
     System.out.println(errorDto.getMessage());
+    Assert.assertEquals(response.code(),400);
+    Assert.assertEquals(errorDto.getMessage(),"Wrong email format! Example: name@mail.com");
+    Assert.assertTrue(errorDto.getMessage().contains("Wrong email format!"));
     }
 
     @Test
@@ -69,8 +74,12 @@ public static final MediaType JSON = MediaType.get("application/json; charset=ut
         ErrorDto errorDto = gson.fromJson(responseJson,ErrorDto.class);
         System.out.println(errorDto.getCode());
         System.out.println(errorDto.getMessage());
+        Assert.assertEquals(errorDto.getMessage(), "Wrong email format! Example: name@mail.com");
+
+
         }
     }
+
 
     @Test
     public void RegistrationOkHttpNegativeTestWithInvalidEmail() throws IOException {

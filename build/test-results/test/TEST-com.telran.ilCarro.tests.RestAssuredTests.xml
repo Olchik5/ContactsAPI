@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.telran.ilCarro.tests.RestAssuredTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-28T15:09:19" hostname="LAPTOP-ES9UA65O" time="2.218">
+  <properties/>
+  <testcase name="putNonExistentUserNegativeTest" classname="com.telran.ilCarro.tests.RestAssuredTests" time="2.218"/>
+  <system-out><![CDATA[404
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

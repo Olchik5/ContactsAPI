@@ -24,7 +24,9 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok:1.18.16'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
 
-    implementation 'javax.xml.bind:jaxb-api:2.3.1'
+    implementation 'javax.xml.bind:jaxb-api:2.3.1' //help to send request ad JDK 11
+
+    implementation 'com.jayway.restassured:rest-assured:2.9.0'
 
 }
 
